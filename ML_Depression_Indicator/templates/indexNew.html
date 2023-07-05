@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ML Creed - Depress Indicator</title>
+        <link rel="icon" type="image/x-icon" href="static/img/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Machine Learning</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('static/assets/img/depress.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Depression Indicator</h1>
+                            <span class="subheading"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Main Content-->
+
+        <form action="/predict" method="POST">
+            <section id="service" class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col">
+                            <h2 class="testTitle">Take a 3 Minute Test</h2>
+                            <hr class="botm-line">
+                            <h4 style="font: black; text-align: left;">This depression quiz is based on the Depression Screening Test developed by Ivan K. Goldberg, MD, the founder of Psycom who was also a renowned psychiatrist.</h4>
+                            <h4 style="text-align: left;">Instructions: Below are some list of questions that relate to life experiences common among people who have been diagnosed with depression. Please read each question carefully, and indicate how often you have experienced the same or similar challenges in the past 2 weeks.</h4>
+          
+                            <!-- SOALAN 1 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+          
+                                    <p>Do you lack interest or pleasure in doing things?</p>
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a10" name="a1" value="0" required="required">
+                                            <label for="a10">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a11" name="a1" value="1" required="required">
+                                            <label for="a11">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a12" name="a1" value="2" required="required">
+                                            <label for="a12">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a13" name="a1" value="3" required="required">
+                                            <label for="a13">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+          
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 2 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+            
+                                    <p>Do you feel hopeless, depressed or down?</p>
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a20" name="a2" value="0" required="required">
+                                            <label for="a20">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a21" name="a2" value="1"  required="required">
+                                            <label for="a21">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a22" name="a2" value="2" required="required">
+                                            <label for="a22">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a23" name="a2" value="3" required="required">
+                                            <label for="a23">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+          
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 3 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>Do you have trouble falling or staying asleep, or do you sleep excessively?</p>
+          
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a30" name="a3" value="0" required="required">
+                                            <label for="a30">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a31" name="a3" value="1" required="required">
+                                            <label for="a31">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a32" name="a3" value="2" required="required">
+                                            <label for="a32">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a33" name="a3" value="3" required="required">
+                                            <label for="a33">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- SOALAN 4 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>Do you often lack energy or feel tired? </p>
+          
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a40" name="a4" value="0" required="required">
+                                            <label for="a40">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a41" name="a4" value="1" required="required">
+                                            <label for="a41">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a42" name="a4" value="2" required="required">
+                                            <label for="a42">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a43" name="a4" value="3" required="required">
+                                            <label for="a43">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                    
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 5 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>Do you often have experiences with poor appetite, weight loss or overeating?</p>
+                    
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a50" name="a5" value="0" required="required">
+                                            <label for="a50">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a51" name="a5" value="1" required="required">
+                                            <label for="a51">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a52" name="a5" value="2" required="required">
+                                            <label for="a52">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a53" name="a5" value="3" required="required">
+                                            <label for="a53">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                    
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 6 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                <p>Do you often feel bad about yourself - etc. that you are a failure or have let yourself or your family down?</p>
+                
+                                    <ul class="list-group">
+                                    <div>
+                                        <input type="radio" id="a60" name="a6" value="0" required="required">
+                                        <label for="a60">Not at all.</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="a61" name="a6" value="1" required="required">
+                                        <label for="a61">Sometimes.</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="a62" name="a6" value="2" required="required">
+                                        <label for="a62">Most of the times.</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="a63" name="a6" value="3" required="required">
+                                        <label for="a63">Nearly every day.</label>
+                                    </div>
+                                    </ul>
+                
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 7 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>Do you have trouble concentrating on daily activities? - etc while reading newspapers or watching television.</p>
+                
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a70" name="a7" value="0" required="required">
+                                            <label for="a70">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a71" name="a7" value="1" required="required">
+                                            <label for="a71">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a72" name="a7" value="2" required="required">
+                                            <label for="a72">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a73" name="a7" value="3" required="required">
+                                            <label for="a73">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                
+                                </div>
+                            </div>
+
+                            <!-- SOALAN 8 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>Do you feel slow or moody while talking with others?</p>
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a80" name="a8" value="0" required="required">
+                                            <label for="a80">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a81" name="a8" value="1" required="required">
+                                            <label for="a81">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a82" name="a8" value="2" required="required">
+                                            <label for="a82">Most of the times.</label required="required">
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a83" name="a8" value="3" required="required">
+                                            <label for="a83">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 9 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>You think that you would be better off dead, or would feel like hurting yourself?</p>
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a90" name="a9" value="0" required="required">
+                                            <label for="a90">Not at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a91" name="a9" value="1" required="required">
+                                            <label for="a91">Sometimes.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a92" name="a9" value="2" required="required">
+                                            <label for="a92">Most of the times.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a93" name="a9" value="3" required="required">
+                                            <label for="a93">Nearly every day.</label>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+          
+                            <!-- SOALAN 10 -->
+                            <br>
+                            <div class="service-info">
+                                <div class="icon-info">
+                                    <p>If you've had any experiences with issues above, how difficult would these problems make your life be at work, home, school, or with other people?</p>
+                                    <ul class="list-group">
+                                        <div>
+                                            <input type="radio" id="a100" name="a10" value="0" required="required">
+                                            <label for="a100">Not difficult at all.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a101" name="a10" value="1" required="required">
+                                            <label for="a101">Somewhat difficult.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a102" name="a10" value="2" required="required">
+                                            <label for="a102">Very difficult.</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="a103" name="a10" value="3" required="required">
+                                            <label for="a103">Extremely difficult.</label>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+          
+                            <button type="submit" class="btn btn-primary">See Result</button>
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+          
+        <!-- Footer-->
+
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; ML Creed 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
